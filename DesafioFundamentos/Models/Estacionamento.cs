@@ -16,18 +16,20 @@ namespace DesafioFundamentos.Models
 
         public void AdicionarVeiculo()
         {
-            string adicionarplaca = "";
+            //implementado!!
+            string adicionarPlaca = "";
             Console.WriteLine("Digite a placa do veículo para estacionar:");
             adicionarPlaca = Console.ReadLine();
-            veiculos.Add(adicionarplaca);
+            veiculos.Add(adicionarPlaca);
         }
 
         public void RemoverVeiculo()
         {
+            //Implementado!!
             string placa = "";
             Console.WriteLine("Digite a placa do veículo para remover:");
             placa = Console.ReadLine();
-           
+            //--------------------------------------------
           
             // Verifica se o veículo existe
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
@@ -35,6 +37,7 @@ namespace DesafioFundamentos.Models
                 int horas = 0;
                 decimal valorTotal = 0; 
 
+                //Implementado!!
                 Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
                 horas = Convert.ToInt32(Console.ReadLine());
 
@@ -42,6 +45,7 @@ namespace DesafioFundamentos.Models
 
                 veiculos.Remove(placa);
 
+                //--------------------------------------------------
                 Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal.ToString("N",new CultureInfo("pt-BR"))}");
                 
             }
@@ -57,13 +61,15 @@ namespace DesafioFundamentos.Models
             if (veiculos.Any())
             {
                Console.WriteLine("Os veículos estacionados são:");
-                
+            
+               //Implementado!!    
                int contador = 0;
                foreach (string placa in veiculos)
                {
                     Console.WriteLine($"Veículo Placa - {placa}");
                     contador++;
                }
+               //-----------------------------------------------------
             }
             else
             {
